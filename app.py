@@ -13,8 +13,8 @@ key = st.secrets["AZURE_KEY"]
 # 🔹 Authenticate with Azure
 # -------------------------------
 def authenticate_client():
-    credential = AzureKeyCredential(AZURE_KEY)
-    client = TextAnalyticsClient(endpoint=AZURE_ENDPOINT, credential=credential)
+    credential = AzureKeyCredential(key)
+    client = TextAnalyticsClient(endpoint=endpoint, credential=credential)
     return client
 
 client = authenticate_client()
