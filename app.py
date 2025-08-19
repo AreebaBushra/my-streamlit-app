@@ -5,8 +5,9 @@ from azure.core.credentials import AzureKeyCredential
 # -------------------------------
 # 🔹 Azure Setup (Replace with your details)
 # -------------------------------
-AZURE_ENDPOINT = "https://<your-resource-name>.cognitiveservices.azure.com/"
-AZURE_KEY = "<your-key>"
+
+endpoint = st.secrets["AZURE_ENDPOINT"]
+key = st.secrets["AZURE_KEY"]
 
 # -------------------------------
 # 🔹 Authenticate with Azure
@@ -56,4 +57,4 @@ if st.button("Summarize"):
 
 # Footer
 st.markdown("---")
-st.caption("Built with ❤️ using Azure Cognitive Services + Streamlit")
+
